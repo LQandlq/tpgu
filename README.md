@@ -1,7 +1,7 @@
 Official Tensorflow implementation of **TPGU**, from the following paper:<br />Augmenting Interaction Effects in Convolutional Networks with Taylor Polynomial Gated Units. 2024<br />Ligeng Zou, Qi Liu, and Jianhua Dai
-:::info
+info
 We propose a new activation function dubbed TPGU (Taylor Polynomial Gated Unit), which are inspired by Taylor polynomials of the sigmoid function. In addition to being able to learn the strength of each order of interactions, our proposed TPGU activation function does not require any regularization or normalization of the inputs and outputs, nor any special constraints on the polynomial parameters.
-:::
+
 <a name="hpJ9c"></a>
 ## Model Zoo
 ImageNet-1K results on TPU:
