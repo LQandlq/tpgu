@@ -1,0 +1,77 @@
+runtime:
+  distribution_strategy: tpu
+  mixed_precision_dtype: bfloat16
+task:
+  model:
+    model_name: swin_small_224
+    num_classes: 1000
+    input_size: [ 224, 224, 3 ]
+  losses:
+    l2_weight_decay: 0.0
+    label_smoothing: 0.1
+    one_hot: false
+    soft_labels: True
+  train_data:
+    input_path: path_to_imagenet/train*
+    is_training: true
+    dtype: bfloat16
+    global_batch_size: 128
+    aug_rand_hflip: true
+    aug_type:
+      randaug:
+        cutout_const: 40
+        exclude_ops: [ Cutout ]
+        magnitude: 9
+        magnitude_std: 0.0
+        num_layers: 2
+        translate_const: 10
+      type: randaug
+    mixup_and_cutmix:
+      cutmix_alpha: 1.0
+      label_smoothing: 0.1
+      mixup_alpha: 0.8
+      prob: 1.0
+      switch_prob: 0.5
+    randaug_magnitude: 10
+  validation_data:
+    input_path: path_to_imagenet/val*
+    is_training: false
+    global_batch_size: 128
+    dtype: bfloat16
+    drop_remainder: false
+trainer:
+  best_checkpoint_export_subdir: 'best_ckpt'
+  best_checkpoint_eval_metric: 'accuracy'
+  best_checkpoint_metric_comp: 'higher'
+  best_ema_checkpoint_export_subdir: 'ema_best_ckpt'
+  best_ema_checkpoint_eval_metric: 'ema_accuracy'
+  best_ema_checkpoint_metric_comp: 'higher'
+  train_steps: 375300 # one step has accumulation_steps mirco-batches
+  accumulation_steps: 8
+  steps_per_loop: 1251
+  validation_steps: 391
+  validation_interval: 1251
+  summary_interval: 1251
+  checkpoint_interval: 1251
+  max_to_keep: 2
+  preemption_on_demand_checkpoint: false
+  optimizer_config:
+    ema:
+      average_decay: 0.9999
+    learning_rate:
+      cosine:
+        alpha: 0.0
+        decay_steps: 375300
+        initial_learning_rate: 0.001
+      type: cosine
+    optimizer:
+      adamw:
+        include_in_weight_decay: null
+        exclude_from_weight_decay: [ .*(bias|beta|gamma):0$ ]
+        weight_decay_rate: 0.05
+      type: adamw
+    warmup:
+      linear:
+        warmup_learning_rate: 0
+        warmup_steps: 25020
+      type: linear
