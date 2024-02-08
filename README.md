@@ -8,7 +8,7 @@ ImageNet-1K results on TPU:
 
 | Name | Image Size | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Checkpoint |
 | --- | --- | --- | --- | --- | --- |
-| ConvNeXt-T * | 224*224 | 4.48 | 28.59 | 80.5 |  |
+| ConvNeXt-T * | 224*224 | 4.48 | 28.59 | 80.5 | [Baidu Cloud](https://pan.baidu.com/s/1zQLaqMFKE_we4OTportnzg?pwd=9z6a) |
 | + TPGU{1,1,1,1} | 224*224 | 4.49 | 28.66 | 80.7 |  |
 | + TPGU{2,2,2,2} | 224*224 | 4.50 | 28.69 | 80.8 |  |
 | + TPGU{3,3,3,3} | 224*224 | 4.50 | 28.72 | 80.9 |  |
@@ -24,7 +24,7 @@ ImageNet-1K results on TPU:
 | + TPGU{5,6,7,8} | 224*224 | 4.53 | 28.83 | 81.2 |  |
 | + TPGU{6,7,8,9} | 224*224 | 4.54 | 28.86 | 81.2 |  |
 | + TPGU{7,8,9,10} | 224*224 | 4.55 | 28.89 | 81.1 |  |
-| ConvNeXt-S * | 224*224 | 8.73 | 50.22 | 82.2 |  |
+| ConvNeXt-S * | 224*224 | 8.73 | 50.22 | 82.2 | [Baidu Cloud](https://pan.baidu.com/s/1ZLUe3SXzJpsjWADmOeNWyw?pwd=q4v7) |
 | + TPGU{7,7,7,7} | 224*224 | 8.82 | 50.71 | 82.5 |  |
 
 | Name | Image Size | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Checkpoint |
