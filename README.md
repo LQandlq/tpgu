@@ -29,7 +29,7 @@ ImageNet-1K results on TPU:
 
 | Name | Image Size | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Checkpoint |
 | --- | --- | --- | --- | --- | --- |
-| HorNet-T * | 224*224 | 4.01 | 22.41 | 81.4 |  |
+| HorNet-T * | 224*224 | 4.01 | 22.41 | 81.4 | [Baidu Cloud](https://pan.baidu.com/s/1qjuTWKUsN6iPm8FvYj9-YQ?pwd=zn22) |
 | + TPGU{1,1,1,1} | 224*224 | 4.01 | 22.48 | 81.2 |  |
 | + TPGU{2,2,2,2} | 224*224 | 4.01 | 22.50 | 81.3 |  |
 | + TPGU{3,3,3,3} | 224*224 | 4.02 | 22.53 | **81.7** |  |
@@ -37,19 +37,19 @@ ImageNet-1K results on TPU:
 | + TPGU{1,2,3,4} | 224*224 | 4.02 | 22.53 | 81.5 |  |
 | + TPGU{2,3,4,5} | 224*224 | 4.02 | 22.55 | 81.5 |  |
 | + TPGU{3,4,5,6} | 224*224 | 4.03 | 22.58 | 81.5 |  |
-| HorNet-S * | 224*224 | 8.87 | 49.52 | 82.2 |  |
+| HorNet-S * | 224*224 | 8.87 | 49.52 | 82.2 | [Baidu Cloud](https://pan.baidu.com/s/1T6a02IucQt2Hz_dU20Rk9Q?pwd=4an1) |
 | + TPGU{3,3,3,3} | 224*224 | 8.89 | 49.71 | 82.4 |  |
 
 | Name | Image Size | FLOPs (G) | Params (M) | Top-1 Acc. (%) | Checkpoint |
 | --- | --- | --- | --- | --- | --- |
-| Swin-T * | 224*224 | 4.51 | 28.53 | 80.3 |  |
+| Swin-T * | 224*224 | 4.51 | 28.53 | 80.3 | [Baidu Cloud](https://pan.baidu.com/s/1qMNBCVehoEdbICwz4F-vYA?pwd=ucrz) |
 | + TPGU{1,1,1,1} | 224*224 | 4.52 | 28.59 | 79.5 |  |
 | + TPGU{2,2,2,2} | 224*224 | 4.53 | 28.60 | 80.0 |  |
 | + TPGU{3,3,3,3} | 224*224 | 4.54 | 28.62 | **80.6** |  |
 | + TPGU{4,4,4,4} | 224*224 | 4.54 | 28.64 | 80.5 |  |
 | + TPGU{1,2,3,4} | 224*224 | 4.53 | 28.62 | 80.5 |  |
 | + TPGU{2,3,4,5} | 224*224 | 4.54 | 28.64 | 80.4 |  |
-| Swin-S * | 224*224 | 8.78 | 49.94 | 82.1 |  |
+| Swin-S * | 224*224 | 8.78 | 49.94 | 82.1 | [Baidu Cloud](https://pan.baidu.com/s/1yqS5mAQtwKwQrazEURX8Gw?pwd=tspo) |
 | + TPGU{3,3,3,3} | 224*224 | 8.82 | 50.12 | 82.2 |  |
 
 <a name="UKHLY"></a>
